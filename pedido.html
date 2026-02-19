@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Formulario</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="pagina.html">Inicio</a> |
+            <a href="menu.html">Menú</a> |
+            <a href="contacto.html">Contacto</a> |
+            <a href="https://cafearoma.com" target="_blank">Sitio Oficial</a> |
+            <a href="pedido.html">Pedido</a> |
+         </nav>
+         <h1>Formulario de Pedido</h1>
+         <p>Completa tus datos y elige tu pedido. Los campos con * son obligatorios.</p>
+    </header>
+    <!-- Inicio Formulario -->
+    <main>
+        <!-- Informacion personal -->
+         <form action="#" method="get">
+        <fieldset>
+            <legend>Datos Personales</legend>
+            <label for="nombre">Nombre Completo *</label> <br>
+            <input type="text" name="nombre" placeholder="Ej: Carlos Guzmán" required/> <br> <br>
+            <label for="email">Correo Electrinico *</label> <br>
+            <input type="email" name="correo" placeholder="pedido@gmail.com" required/> <br> <br>
+            <label for="tel">Telefono</label> <br>
+            <input type="tel" name="telefono" placeholder="Ej: 70234512" pattern="[0-9]{8,}" title="Solo numeros, minimo 8 digitos"> <br> <br>
+            <label for="date">Fecha de Recogida</label> <br>
+            <input type="date" name="fecha" id="hora"> <br> <br>
+            <label for="time">Hora de Recogida</label> <br>
+            <input type="time" name="hora" id="hora">
+        </fieldset>
+    <!-- Formulario de pedido -->
+        <fieldset>
+            <legend>Detalles de Pedido</legend>
+            <label for="bebida">Bebida *</label> <br>
+            <!-- bebidas y postre -->
+            <select name="bebida" id="bebida">
+                <option value="opcion">-- Seleciones una Bebida --</option>
+                <option value="cafe">Café Americano</option>
+                <option value="capuccino">Capucciono Especial</option>
+                <option value="latte">Latte con Vainilla</option>
+                <option value="frappe">Frappé con Café</option>
+                <option value="limonada">Limonada con Menta</option>
+            </select> <br> <br>
+            <label for="postre">Postre *</label> <br>
+            <select name="postre" id="postre">
+                <option value="post">-- Seleccione un Postre --</option>
+                <option value="brownie">Brownie Casero</option>
+                <option value="croissant">Croissant de Mantequilla</option>
+                <option value="cheesecake">Cheesecake</option>
+            </select> <br> <br>
+            <!-- tamaños -->
+            <label for="tamaño">Tamaño *</label> <br>
+            <input type="radio" name="tamaño" value="pequeño" id="pequeño">
+            <label for="pequeño">Pequeño</label>
+            <input type="radio" name="tamaño" value="mediano" id="medio">
+            <label for="medio">Mediano</label>
+            <input type="radio" name="tamaño" value="grande" id="grande">
+            <label for="grande">Grande</label> <br> <br>
+            <!-- cantidad -->
+             <label for="cantidad">Cantidad *</label> <br>
+             <input type="number" name="cantidad" id="cantidad" max="5" min="1"> <br> <br>
+             <!-- Extras -->
+              <label for="extra">Extras</label> <br>
+              <input type="checkbox" name="leche" id="leche">
+              <label for="leche">Leche Vegetal</label>
+              <input type="checkbox" name="shot" id="shot">
+              <label for="shot">Extra Shot</label>
+              <input type="checkbox" name="azucar" id="azucar">
+              <label for="azucar">Sin Azucar</label> <br> <br>
+              <!-- Comentarios -->
+               <label for="comentar">Indicaciones/Comentarios</label> <br>
+               <textarea name="mensaje" id="mensaje" rows="5" cols="30" placeholder="Ej: Sin canela, entregar en vaso termico" title="Si la cantidad del pedido es mayor a 10 rellene este campo"></textarea>
+        </fieldset>
+        <!-- Entrega -->
+         <fieldset>
+            <legend>Entrega</legend>
+            <input type="radio" name="tienda" id="tienda">
+            <label for="tienda">Retiro en Tienda</label>
+            <input type="radio" name="domicilio" id="domicilio">
+            <label for="domicilio">Entrega a Domicilio</label> <br> <br>
+            <label for="casa">Direccion (si es Domicilio)</label> <br>
+            <input type="text" name="casa" id="casa" placeholder="Calle, numero, referencia"> 
+            <!-- sucursal -->
+             <input type="hidden" name="sucursal" value="central">
+         </fieldset> <br>
+
+         <button type="submit" action="#" method="get">Enviar Pedido</button>
+         <button type="reset"action="#" method="get">Limpiar</button>
+         </form>
+    </main>
+
+     <footer>
+        <center><p>© 2026 Cafeteria Aroma. Todos los Derechos reservados</p></center>
+    </footer>
+</body>
+</html>
